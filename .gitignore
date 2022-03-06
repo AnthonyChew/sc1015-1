@@ -1,2 +1,8 @@
 
 .DS_Store
+.idea/vcs.xml
+.idea/sc1015.iml
+.idea/modules.xml
+.idea/misc.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/.gitignore
