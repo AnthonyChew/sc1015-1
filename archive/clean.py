@@ -18,5 +18,8 @@ hdb = pd.concat(csv_df_list, ignore_index=True)
 # 117527 "remaining_lease" data entries
 print(hdb.info())
 
+# Drop Columns "remaining_lease", "street_name", "storey_range"
+hdb = hdb.drop(columns=["remaining_lease", "street_name", "storey_range"])
+
 # save clean data frame to hdb.csv
 hdb.to_csv("hdb.csv")
