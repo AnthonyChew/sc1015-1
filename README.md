@@ -90,3 +90,10 @@ JURONG EAST          340000.0
 ### v0.0.3 README Update (2022/03/07)
 - Added EDA
 - Fixed typo
+
+### v0.1.0 README Update (2022/03/27)
+- Added Time Series EDA
+- flat_type breakdown
+- 3-5 Room Cluster
+- 3-5 Room Median
+- Testing Playground (To be removed)
