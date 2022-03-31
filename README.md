@@ -97,3 +97,8 @@ JURONG EAST          340000.0
 - 3-5 Room Cluster
 - 3-5 Room Median
 - Testing Playground (To be removed)
+
+### v0.1.1 Clean Data Update (2022/03/31)
+- Added `remaining_lease` missing data
+- Removed `hdb_raw.csv` (for testing only)
+- Added `year` and `month`

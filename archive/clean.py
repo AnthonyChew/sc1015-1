@@ -19,10 +19,32 @@ hdb = pd.concat(csv_df_list, ignore_index=True)
 print(hdb.info())
 
 # save raw data for testing
-hdb.to_csv("hdb_raw.csv")
+# added index = False to prevent the first column being the index
+hdb.to_csv("hdb_raw.csv", index = False)
 
-# Drop Columns "remaining_lease", "street_name", "storey_range"
-hdb = hdb.drop(columns=["remaining_lease", "street_name", "storey_range"])
+# Drop Columns "remaining_lease"
+hdb = hdb.drop(columns=["remaining_lease"])
+
+# Add in "year"
+hdb['year'] = pd.DatetimeIndex(pd.to_datetime(hdb['month'])).year
+
+# Add in Date
+hdb['date'] = pd.DatetimeIndex(pd.to_datetime(hdb['month']))
+
+# change "month" from text to month
+hdb['month'] = pd.DatetimeIndex(pd.to_datetime(hdb['month'])).month
+
+# Add in "remaining_lease" calculated
+hdb["remaining_lease"] = (hdb['lease_commence_date'] + 99) - hdb['year']
+
+# move "year" to the front for readability
+cols = list(hdb)
+cols.insert(0, cols.pop(cols.index("year")))
+cols.insert(0, cols.pop(cols.index("date")))
+hdb = hdb.loc[:, cols]
+
+print(hdb.info())
 
 # save clean data frame to hdb.csv
-hdb.to_csv("hdb.csv")
+# added index = False to prevent the first column being the index
+hdb.to_csv("hdb.csv", index=False)
