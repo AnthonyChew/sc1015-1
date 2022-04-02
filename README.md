@@ -100,5 +100,14 @@ JURONG EAST          340000.0
 
 ### v0.1.1 Clean Data Update (2022/03/31)
 - Added `remaining_lease` missing data
+> `remaining_lease` = (`lease_commence_date` + 99) - `year`
 - Removed `hdb_raw.csv` (for testing only)
 - Added `year` and `month`
+- Restored `street_name` and `storey_range` (for unit tracking)
+
+### v0.2.0 ARIMA (2022/04/02)
+- Added `ARIMA` model
+- Best blk `Jurong 211 (3 ROOM)`
+- Added fill missing data sequence 
+- Added `auto_arima` params (failed)
+- Added `LSTM` model (failed)
