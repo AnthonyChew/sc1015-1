@@ -1,6 +1,54 @@
 # SC1015 DSAI Mini-Project
 Eddy, Bryan & Yue Zhong
 
+
+
+## Version History
+> Version Format: v*MAJOR*.*MINOR*.*PATCH*
+
+### v0.0.0 Clean Data (2022/03/06)
+- Combined all csv files into `hdb.csv`
+- `2015 to 2016` & `2017` csv files have an extra column `remaining_lease`
+- `hdb.csv` 826581 data entries
+
+### v0.0.1 README Hotfix (2022/03/06)
+- Fixed markdown headings issue
+
+### v0.0.2 Clean Data Drop Columns (2022/03/07)
+- Dropped `remaining_lease`, `street_name`, `storey_range` columns
+
+### v0.0.3 README Update (2022/03/07)
+- Added EDA
+- Fixed typo
+
+### v0.1.0 README Update (2022/03/27)
+- Added Time Series EDA
+- flat_type breakdown
+- 3-5 Room Cluster
+- 3-5 Room Median
+- Testing Playground (To be removed)
+
+### v0.1.1 Clean Data Update (2022/03/31)
+- Added `remaining_lease` missing data
+> `remaining_lease` = (`lease_commence_date` + 99) - `year`
+- Removed `hdb_raw.csv` (for testing only)
+- Added `year` and `month`
+- Restored `street_name` and `storey_range` (for unit tracking)
+
+### v0.2.0 ARIMA (2022/04/02)
+- Added `ARIMA` model
+- Best blk `Jurong 211 (3 ROOM)`
+- Added fill missing data sequence 
+- Added `auto_arima` params (failed)
+- Added `LSTM` model (failed)
+
+### v0.2.1 ARIMA Web Scrape Test Data (2022/04/03)
+- Added `web_scrape_test_data.py` script to scrape test data
+- Added `chromedriver` (for `selenium` to work)
+- Generated `test_data.csv` 
+- Added `web_scrape_pd` (failed: 403 forbidden)
+- Added `web_scrape_bs4` (failed: 403 forbidden)
+
 ## EDA
 ### 1. Time Series & Lease Remaining (Eddy)
 - To be Updated
@@ -72,42 +120,3 @@ JURONG EAST          340000.0
 
 ### 3. Flat Type, Floor Area & Flat Model (Yue Zhong)
 - To be Updated
-
-## Version History
-> Version Format: v*MAJOR*.*MINOR*.*PATCH*
-
-### v0.0.0 Clean Data (2022/03/06)
-- Combined all csv files into `hdb.csv`
-- `2015 to 2016` & `2017` csv files have an extra column `remaining_lease`
-- `hdb.csv` 826581 data entries
-
-### v0.0.1 README Hotfix (2022/03/06)
-- Fixed markdown headings issue
-
-### v0.0.2 Clean Data Drop Columns (2022/03/07)
-- Dropped `remaining_lease`, `street_name`, `storey_range` columns
-
-### v0.0.3 README Update (2022/03/07)
-- Added EDA
-- Fixed typo
-
-### v0.1.0 README Update (2022/03/27)
-- Added Time Series EDA
-- flat_type breakdown
-- 3-5 Room Cluster
-- 3-5 Room Median
-- Testing Playground (To be removed)
-
-### v0.1.1 Clean Data Update (2022/03/31)
-- Added `remaining_lease` missing data
-> `remaining_lease` = (`lease_commence_date` + 99) - `year`
-- Removed `hdb_raw.csv` (for testing only)
-- Added `year` and `month`
-- Restored `street_name` and `storey_range` (for unit tracking)
-
-### v0.2.0 ARIMA (2022/04/02)
-- Added `ARIMA` model
-- Best blk `Jurong 211 (3 ROOM)`
-- Added fill missing data sequence 
-- Added `auto_arima` params (failed)
-- Added `LSTM` model (failed)
