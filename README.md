@@ -49,6 +49,12 @@ Eddy, Bryan & Yue Zhong
 - Added `web_scrape_pd` (failed: 403 forbidden)
 - Added `web_scrape_bs4` (failed: 403 forbidden)
 
+### v0.2.2 ARIMA R^2 MSE RMSE (2022/04/03)
+- Cleaned `test_data.csv` to `test_data_median.csv`
+- Added `r2`, `mse` and `rmse` fns
+- Optimised ARIMA model (finding best p value)
+- Bugfix `jurong_211.csv` `Month` to `month`
+
 ## EDA
 ### 1. Time Series & Lease Remaining (Eddy)
 - To be Updated
