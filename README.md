@@ -59,6 +59,12 @@ Eddy, Bryan & Yue Zhong
 - Renamed folder `archive` to `data_hdb`
 - Added folder `data_arima`
 
+### v0.3.1 Extras Clean Up (2022/04/17)
+- Added folder `extras`
+- Renamed & Moved all extra content to `extras` folder
+- Renamed `Time Series` to `EDA`
+
+
 ## EDA
 ### 1. Time Series & Lease Remaining (Eddy)
 - To be Updated
