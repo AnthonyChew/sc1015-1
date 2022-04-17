@@ -27,5 +27,5 @@ for i in range(1, 25 + 1):
     print(date, price)
 
 test_data = pd.DataFrame({"month": month, "resale_price": resale_price})
-test_data.to_csv("test_data.csv", index=False)
+test_data.to_csv("./data_arima/test_data.csv", index=False)
 driver.quit()

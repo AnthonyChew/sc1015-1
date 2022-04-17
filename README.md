@@ -52,8 +52,12 @@ Eddy, Bryan & Yue Zhong
 ### v0.2.2 ARIMA R^2 MSE RMSE (2022/04/03)
 - Cleaned `test_data.csv` to `test_data_median.csv`
 - Added `r2`, `mse` and `rmse` fns
-- Optimised ARIMA model (finding best p value)
 - Bugfix `jurong_211.csv` `Month` to `month`
+
+### v0.3.0 ARIMA Optimisation & CSV Reorganization (2022/04/17)
+- Optimised ARIMA model (found best p-value, d-value, q-value)
+- Renamed folder `archive` to `data_hdb`
+- Added folder `data_arima`
 
 ## EDA
 ### 1. Time Series & Lease Remaining (Eddy)
